@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BethanysPieShop.Models;
+﻿using BethanysPieShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BethanysPieShop.Controllers
 {
-    public class FeedbackController:Controller
+    [Authorize]
+    public class FeedbackController : Controller
     {
         private readonly IFeedbackRepository _feedbackRepository;
 
